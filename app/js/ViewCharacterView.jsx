@@ -17,7 +17,8 @@ class ViewCharacterView extends React.Component {
     render() {
         if (this.state.playerNum == null) {
             return <EnterPlayerNumView
-                onNumber={playerNum => this.setState({playerNum})}
+                onNumber={playerNum => this.setState({playerNum})} 
+                setHomeView={this.props.setHomeView}
             />
         } 
         return (
