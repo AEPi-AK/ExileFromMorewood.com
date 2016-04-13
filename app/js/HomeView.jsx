@@ -6,12 +6,12 @@ class HomeView extends React.Component {
 
   render() {
     const buttons = [
-        {title: 'View Leaderboard', icon: 'trophy.svg'},
-        {title: 'View Character', icon: 'character.svg'},
-        {title: 'Edit Player Name', icon: 'edit.svg'},
-        {title: 'Get Help', icon: 'help.svg'},
-    ].map(({title, icon}, i) => (
-        <div className='button' key={i}>
+        {title: 'View Leaderboard', icon: 'trophy.svg', click:1},
+        {title: 'View Character', icon: 'character.svg', click:2},
+        {title: 'Edit Player Name', icon: 'edit.svg', click:3},
+        {title: 'Get Help', icon: 'help.svg', click:0},
+    ].map(({title, icon, click}, i) => (
+        <div className='button' onClick={this.props.setView.bind(this, click)} key={i}>
             <img src={`static/img/${icon}`}/>
             {title}
         </div>

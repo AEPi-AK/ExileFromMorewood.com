@@ -5,6 +5,7 @@ import HomeView from './HomeView.jsx'
 import LeaderboardView from './LeaderboardView.jsx'
 import ViewCharacterView from './ViewCharacterView.jsx'
 import EditNameView from './EditNameView.jsx'
+import EnterPlayerNumView from './EnterPlayerNumView.jsx'
 
 class Main extends React.Component {
 

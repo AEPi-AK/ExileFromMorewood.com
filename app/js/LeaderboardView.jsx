@@ -6,7 +6,7 @@ class LeaderboardView extends React.Component {
 
   render() {
     return (
-      <div className='container'>Hi</div>
+      <div className='container'>Leaderboard</div>
     )
   }
 
