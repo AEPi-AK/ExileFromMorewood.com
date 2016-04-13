@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import BackButton from './BackButton.jsx'
 import EnterPlayerNumView from './EnterPlayerNumView.jsx'
+
 import '../less/EditNameView.less'
 
 class EditNameView extends React.Component {
@@ -23,11 +25,13 @@ class EditNameView extends React.Component {
     render() {
         if (this.state.playerNum == null) {
             return <EnterPlayerNumView
-                onNumber={playerNum => this.setState({playerNum})}
+                onNumber={playerNum => this.setState({playerNum})} 
+                setHomeView={this.props.setHomeView}
             />
         } 
         return (
             <div className='edit-container'> 
+                <BackButton onClick={this.props.setHomeView}/>
                 <div className='title'>Edit Player Name</div> 
                 <div className='names-container'>
                     <div className='name-title'>Current Name</div>

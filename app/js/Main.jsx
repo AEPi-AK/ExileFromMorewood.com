@@ -27,9 +27,14 @@ class Main extends React.Component {
         this.setState({viewIndex});
     }
 
+    setHomeView() {
+        this.setState({viewIndex: 0,});
+    }
+
     render() {
         const views = this.views.map(view => view({
           setView: this.setView.bind(this),
+          setHomeView: this.setHomeView.bind(this),
         }))
         return (
           <div className='view'>

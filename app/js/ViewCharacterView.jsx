@@ -1,6 +1,7 @@
 import React from 'react'
 
 import EnterPlayerNumView from './EnterPlayerNumView.jsx'
+import BackButton from './BackButton.jsx'
 
 import '../less/ViewCharacterView.less'
 
@@ -20,8 +21,10 @@ class ViewCharacterView extends React.Component {
             />
         } 
         return (
-            <div className='container'>Your Character
-            <img src='static/img/dickbutt.jpg'/>
+            <div className='container'>
+                <BackButton onClick={this.props.setHomeView}/>
+                Your Character
+                <img src='static/img/dickbutt.jpg'/>
             </div>
         )
     }
