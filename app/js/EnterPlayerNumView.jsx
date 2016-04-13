@@ -17,7 +17,7 @@ class EnterPlayerNumView extends React.Component {
             <div className='enter-container'>
                 <div className='enter-title'>Enter Player Number</div>
                 <input type='text' ref='input' keyboardType='numeric'/>
-                <div className='button' onClick={this.savePlayerNum.bind(this)}>Finish</div>
+                <div className='button' onClick={this.savePlayerNum.bind(this)}>Done</div>
             </div>
         )
     }
