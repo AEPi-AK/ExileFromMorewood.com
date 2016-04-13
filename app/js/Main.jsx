@@ -1,11 +1,41 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import HomeView from './HomeView.jsx'
+import LeaderboardView from './LeaderboardView.jsx'
+import ViewCharacterView from './ViewCharacterView.jsx'
+import EditNameView from './EditNameView.jsx'
+
 class Main extends React.Component {
 
-  render() {
-    return <h1>main</h1>
-  }
+    constructor(props) {
+        super(props)
+        this.state = {
+            viewIndex: 0,
+        }
+
+        this.views = [
+            HomeView,
+            LeaderboardView,
+            ViewCharacterView,
+            EditNameView,
+        ].map(component => React.createFactory(component))
+    }
+
+    setView(viewIndex) {
+        this.setState({viewIndex});
+    }
+
+    render() {
+        const views = this.views.map(view => view({
+          setView: this.setView.bind(this),
+        }))
+        return (
+          <div className='view'>
+            {views[this.state.viewIndex]}
+          </div>
+        )
+    }
 
 }
 
