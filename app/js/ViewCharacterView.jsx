@@ -1,6 +1,7 @@
 import React from 'react'
 
 import EnterPlayerNumView from './EnterPlayerNumView.jsx'
+
 import '../less/ViewCharacterView.less'
 
 class ViewCharacterView extends React.Component {
@@ -19,8 +20,8 @@ class ViewCharacterView extends React.Component {
             />
         } 
         return (
-            <div className='container'>View Character
-            Hallo Player Number {this.state.playerNum}
+            <div className='container'>Your Character
+            <img src='static/img/dickbutt.jpg'/>
             </div>
         )
     }

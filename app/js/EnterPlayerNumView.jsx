@@ -7,14 +7,15 @@ class EnterPlayerNumView extends React.Component {
 
     savePlayerNum() {
         const inputNode = ReactDOM.findDOMNode(this.refs.input)
-        if (!isNaN(inputNode.value)) {
+        if (!isNaN(inputNode.value) && (inputNode.value!='')) {
             this.props.onNumber(Number(inputNode.value))
         }
     }
 
     render() {
         return (
-            <div className='container'>Enter Player Num plx
+            <div className='enter-container'>
+                <div className='enter-title'>Enter Player Number</div>
                 <input type='text' ref='input' keyboardType='numeric'/>
                 <div className='button' onClick={this.savePlayerNum.bind(this)}>Finish</div>
             </div>

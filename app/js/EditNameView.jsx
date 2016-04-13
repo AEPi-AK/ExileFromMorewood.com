@@ -10,7 +10,7 @@ class EditNameView extends React.Component {
         super(props)
         this.state = {
             playerNum: null,
-            playerName: 'lol some stuff idk lol',
+            playerName: 'ButtWizard420',
         }
     }
 
@@ -26,15 +26,15 @@ class EditNameView extends React.Component {
             />
         } 
         return (
-            <div className='container'> 
-                <div className='title'>Edit Name</div> 
+            <div className='edit-container'> 
+                <div className='title'>Edit Player Name</div> 
                 <div className='names-container'>
                     <div className='name-title'>Current Name</div>
                     <div className='name'>{this.state.playerName}</div>
                     <div className='name-title'>New Name</div>
-                    <input type='text' ref='input' keyboardType='numeric'/>
-                    <div className='button' onClick={this.setName.bind(this)}>Finish</div>
+                    <input type='text' ref='input' maxLength='10' keyboardType='numeric'/>
                 </div>
+                <div className='button' onClick={this.setName.bind(this)}>Finish</div>
             </div>
         )
     }
