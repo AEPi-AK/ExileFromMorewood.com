@@ -27,6 +27,15 @@ async function getCharacter(identifier) {
   return await response.json()
 }
 
+async function getLeaderboard() {
+  console.log(`getCharacterLeaderboard`)
+  const response = await fetch(api_base + `/character-leaderboards`)
+  if (response.status == 404) { // not found
+    return null
+  }
+  return await response.json()
+}
+
 async function updateCharacter(character) {
   console.log('updateCharacter')
   console.log(character)
@@ -59,4 +68,5 @@ export {
   calculateLevel,
   getCharacter,
   updateCharacter,
+  getLeaderboard
 }

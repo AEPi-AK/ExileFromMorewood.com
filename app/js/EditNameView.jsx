@@ -62,9 +62,9 @@ class EditNameView extends React.Component {
                     <div className='title'>Edit Player Name</div> 
                     <div className='names-container'>
                         <div className='name-title'>Current Name</div>
-                        <div className='name'>{this.state.playerName}</div>
+                        <div className='current-name'>{this.state.playerName}</div>
                         <div className='name-title'>New Name</div>
-                        <input type='text' ref='input' maxLength='10' keyboardType='numeric'/>
+                        <input type='text' ref='input' maxLength='16' keyboardType='numeric'/>
                     </div>
                     <div className='button' onClick={this.setName.bind(this)}>Done</div>
                 </div>
