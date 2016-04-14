@@ -14,7 +14,34 @@ class ViewCharacterView extends React.Component {
         }
     }
 
+
     render() {
+
+        const tableRows = [
+            {
+                title:'Strength', 
+                val:10,
+            },
+            {
+                title:'Wisdom', 
+                val:15,
+            },
+            {
+                title:'Dexterity', 
+                val:20
+            },
+            {
+                title:'Exp Points', 
+                val:13,
+            },
+        ].map(({title, val}, i) => (
+            <tr key={i}>
+                <th>{title}</th>
+                <td>{val}</td>
+            </tr>
+        ))
+
+
         if (this.state.playerNum == null) {
             return <EnterPlayerNumView
                 onNumber={playerNum => this.setState({playerNum})} 
@@ -22,10 +49,19 @@ class ViewCharacterView extends React.Component {
             />
         } 
         return (
-            <div className='container'>
+            <div className='view-character-container'>
                 <BackButton onClick={this.props.setHomeView}/>
-                Your Character
-                <img src='static/img/dickbutt.jpg'/>
+                <div className='title'>Your Character</div>
+                <div className='character-card'>
+                    <div className='character-type'>Dickbutt</div>
+                    <img src='static/img/dickbutt.jpg'/>
+                    <div className='level-text'>Level 4 of 20</div>
+                    <div className='table-container'>
+                        <table>
+                            {tableRows}
+                        </table>
+                    </div>
+                </div>
             </div>
         )
     }
