@@ -29433,7 +29433,7 @@
 	                        { className: 'enter-title' },
 	                        'Enter Player Number'
 	                    ),
-	                    _react2.default.createElement('input', { type: 'text', ref: 'input', keyboardType: 'numeric' }),
+	                    _react2.default.createElement('input', { type: 'number', ref: 'input', keyboardType: 'numeric' }),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'button', onClick: this.savePlayerNum.bind(this) },
