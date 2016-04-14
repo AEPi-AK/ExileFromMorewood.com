@@ -7813,15 +7813,15 @@
 
 	var _LeaderboardView2 = _interopRequireDefault(_LeaderboardView);
 
-	var _ViewCharacterView = __webpack_require__(474);
+	var _ViewCharacterView = __webpack_require__(467);
 
 	var _ViewCharacterView2 = _interopRequireDefault(_ViewCharacterView);
 
-	var _EditNameView = __webpack_require__(482);
+	var _EditNameView = __webpack_require__(478);
 
 	var _EditNameView2 = _interopRequireDefault(_EditNameView);
 
-	var _EnterPlayerNumView = __webpack_require__(475);
+	var _EnterPlayerNumView = __webpack_require__(470);
 
 	var _EnterPlayerNumView2 = _interopRequireDefault(_EnterPlayerNumView);
 
@@ -28232,13 +28232,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(467);
+	__webpack_require__(481);
 
-	var _BackButton = __webpack_require__(469);
+	var _BackButton = __webpack_require__(471);
 
 	var _BackButton2 = _interopRequireDefault(_BackButton);
 
-	var _Game = __webpack_require__(472);
+	var _Game = __webpack_require__(468);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28405,46 +28405,6 @@
 /* 467 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(468);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(465)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./LeaderboardView.less", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./LeaderboardView.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 468 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(461)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n.leaderboard-container {\n  color: #D1B125;\n  clear: both;\n  margin-left: 10%;\n  margin-right: 10%;\n}\n.leaderboard-container .leaderboard-title {\n  color: #D91E01;\n  font-family: 'Fell';\n  font-size: 32px;\n  text-align: center;\n  margin-top: 8px;\n}\n.leaderboard-container table {\n  padding: 0;\n  width: 100%;\n  text-align: left;\n  margin-left: auto;\n  margin-right: auto;\n  border-collapse: collapse;\n  overflow: hidden;\n}\n.leaderboard-container tr:first-child td:first-child {\n  border-top-left-radius: 8px;\n}\n.leaderboard-container tr:first-child td:last-child {\n  border-top-right-radius: 8px;\n}\n.leaderboard-container tr:last-child td:first-child {\n  border-bottom-left-radius: 8px;\n}\n.leaderboard-container tr:last-child td:last-child {\n  border-bottom-right-radius: 8px;\n}\n.leaderboard-container .table-container {\n  display: inline;\n  margin: 0;\n}\n.leaderboard-container .table-container .leaderboard-data {\n  font-family: 'Fell';\n  font-size: 20px;\n}\n.leaderboard-container .table-container .title-row {\n  margin-top: 12px;\n  font-size: 20px;\n  font-family: 'Fell SC';\n  text-align: left;\n}\n.leaderboard-container .table-container .rank-title {\n  padding-left: 10px;\n}\n.leaderboard-container .table-container .stripe-dark {\n  padding-top: 3px;\n  background-color: #313131;\n  padding-bottom: 3px;\n}\n.leaderboard-container .table-container .stripe-light {\n  padding-top: 3px;\n  background-color: #444444;\n  padding-bottom: 3px;\n}\n.leaderboard-container .table-container .leaderboard-rank {\n  padding-left: 10px;\n  padding-top: 7px;\n  padding-bottom: 7px;\n  padding-right: 5px;\n}\n.leaderboard-container .table-container .leaderboard-exp {\n  padding-right: 10px;\n}\n.leaderboard-container .table-container .leaderboard-name {\n  padding-right: 5px;\n}\n.leaderboard-container .table-container .dslayer-true {\n  color: #D8D8D8;\n}\n.leaderboard-container .table-container .dslayer-true img {\n  max-width: 30px;\n  vertical-align: middle;\n}\n.leaderboard-container .table-container .dslayer-false img {\n  display: none;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 469 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -28457,9 +28417,23 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(470);
+	var _Game = __webpack_require__(468);
+
+	var _EnterPlayerNumView = __webpack_require__(470);
+
+	var _EnterPlayerNumView2 = _interopRequireDefault(_EnterPlayerNumView);
+
+	var _BackButton = __webpack_require__(471);
+
+	var _BackButton2 = _interopRequireDefault(_BackButton);
+
+	__webpack_require__(476);
+
+	__webpack_require__(483);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step("next", value); }, function (err) { return step("throw", err); }); } } return step("next"); }); }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -28467,90 +28441,212 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var BackButton = function (_React$Component) {
-	    _inherits(BackButton, _React$Component);
+	var ViewCharacterView = function (_React$Component) {
+	    _inherits(ViewCharacterView, _React$Component);
 
-	    function BackButton() {
-	        _classCallCheck(this, BackButton);
+	    function ViewCharacterView(props) {
+	        _classCallCheck(this, ViewCharacterView);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(BackButton).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ViewCharacterView).call(this, props));
+
+	        _this.state = {
+	            playerNum: null,
+	            character: null
+	        };
+	        return _this;
 	    }
 
-	    _createClass(BackButton, [{
+	    _createClass(ViewCharacterView, [{
+	        key: 'onNumberRecieved',
+	        value: function () {
+	            var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(playerNum) {
+	                var characterFromServer;
+	                return regeneratorRuntime.wrap(function _callee$(_context) {
+	                    while (1) {
+	                        switch (_context.prev = _context.next) {
+	                            case 0:
+	                                this.setState({ playerNum: playerNum });
+
+	                                _context.next = 3;
+	                                return (0, _Game.getCharacter)(playerNum);
+
+	                            case 3:
+	                                characterFromServer = _context.sent;
+
+
+	                                if (characterFromServer != null) {
+	                                    this.setState({ character: characterFromServer });
+	                                }
+
+	                                console.log(this.state.character);
+
+	                            case 6:
+	                            case 'end':
+	                                return _context.stop();
+	                        }
+	                    }
+	                }, _callee, this);
+	            }));
+
+	            function onNumberRecieved(_x) {
+	                return ref.apply(this, arguments);
+	            }
+
+	            return onNumberRecieved;
+	        }()
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            if (this.props.dragonSlayer) {
+	            var _this2 = this;
+
+	            if (this.state.character == null) {
+	                return _react2.default.createElement(_EnterPlayerNumView2.default, {
+	                    onNumber: function onNumber(playerNum) {
+	                        return _this2.onNumberRecieved(playerNum);
+	                    },
+	                    setHomeView: this.props.setHomeView
+	                });
+	            }
+
+	            var tableRows = [{
+	                title: 'Strength',
+	                val: this.state.character.strength
+	            }, {
+	                title: 'Wisdom',
+	                val: this.state.character.wisdom
+	            }, {
+	                title: 'Dexterity',
+	                val: this.state.character.dexterity
+	            }, {
+	                title: 'Exp Points',
+	                val: this.state.character.points
+	            }].map(function (_ref, i) {
+	                var title = _ref.title;
+	                var val = _ref.val;
+	                return _react2.default.createElement(
+	                    'tr',
+	                    { key: i },
+	                    _react2.default.createElement(
+	                        'th',
+	                        null,
+	                        title
+	                    ),
+	                    _react2.default.createElement(
+	                        'td',
+	                        null,
+	                        val
+	                    )
+	                );
+	            });
+
+	            if ((0, _Game.calculateLevel)(this.state.character.points) >= _Game.DRAGONSLAYER_LEVEL) {
 	                return _react2.default.createElement(
 	                    'div',
-	                    { className: 'back-button', onClick: this.props.onClick },
-	                    _react2.default.createElement('img', { src: './static/img/back-red.svg' }),
+	                    { className: 'dragonslayer' },
+	                    _react2.default.createElement(_BackButton2.default, { onClick: this.props.setHomeView, dragonSlayer: true }),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'back-text' },
-	                        'back'
+	                        { className: 'view-dragonslayer-container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'title' },
+	                            'Hail, Dragon Slayer!'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'dragonslayer-character-card' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'dragonslayer-character-type' },
+	                                this.state.character.race
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'dragonslayer-logo' },
+	                                _react2.default.createElement('img', { src: './static/img/dragon.png' })
+	                            ),
+	                            _react2.default.createElement('img', { src: 'static/img/' + this.state.character.race + '.png' }),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'dragonslayer-level-text' },
+	                                'Level ',
+	                                (0, _Game.calculateLevel)(this.state.character.points),
+	                                ' of ',
+	                                _Game.MAX_LEVEL
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'dragonslayer-table-container' },
+	                                _react2.default.createElement(
+	                                    'table',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'tbody',
+	                                        null,
+	                                        tableRows
+	                                    )
+	                                )
+	                            )
+	                        )
 	                    )
 	                );
 	            }
+
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'back-button', onClick: this.props.onClick },
-	                _react2.default.createElement('img', { src: './static/img/back.svg' }),
+	                null,
+	                _react2.default.createElement(_BackButton2.default, { onClick: this.props.setHomeView }),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'back-text' },
-	                    'back'
+	                    { className: 'view-character-container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Your Character'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'character-card' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'character-type' },
+	                            this.state.character.race
+	                        ),
+	                        _react2.default.createElement('img', { src: 'static/img/' + this.state.character.race + '.png' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'level-text' },
+	                            'Level ',
+	                            (0, _Game.calculateLevel)(this.state.character.points),
+	                            ' of ',
+	                            _Game.MAX_LEVEL
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'table-container' },
+	                            _react2.default.createElement(
+	                                'table',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'tbody',
+	                                    null,
+	                                    tableRows
+	                                )
+	                            )
+	                        )
+	                    )
 	                )
 	            );
 	        }
 	    }]);
 
-	    return BackButton;
+	    return ViewCharacterView;
 	}(_react2.default.Component);
 
-		exports.default = BackButton;
+		exports.default = ViewCharacterView;
 
 /***/ },
-/* 470 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(471);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(465)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./Base.less", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./Base.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 471 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(461)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 472 */
+/* 468 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28696,7 +28792,7 @@
 	  };
 	}();
 
-	__webpack_require__(473);
+	__webpack_require__(469);
 
 	function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step("next", value); }, function (err) { return step("throw", err); }); } } return step("next"); }); }; }
 
@@ -28729,7 +28825,7 @@
 	exports.getLeaderboard = getLeaderboard;
 
 /***/ },
-/* 473 */
+/* 469 */
 /***/ function(module, exports) {
 
 	(function(self) {
@@ -29124,251 +29220,7 @@
 
 
 /***/ },
-/* 474 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(294);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Game = __webpack_require__(472);
-
-	var _EnterPlayerNumView = __webpack_require__(475);
-
-	var _EnterPlayerNumView2 = _interopRequireDefault(_EnterPlayerNumView);
-
-	var _BackButton = __webpack_require__(469);
-
-	var _BackButton2 = _interopRequireDefault(_BackButton);
-
-	__webpack_require__(478);
-
-	__webpack_require__(480);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step("next", value); }, function (err) { return step("throw", err); }); } } return step("next"); }); }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ViewCharacterView = function (_React$Component) {
-	    _inherits(ViewCharacterView, _React$Component);
-
-	    function ViewCharacterView(props) {
-	        _classCallCheck(this, ViewCharacterView);
-
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ViewCharacterView).call(this, props));
-
-	        _this.state = {
-	            playerNum: null,
-	            character: null
-	        };
-	        return _this;
-	    }
-
-	    _createClass(ViewCharacterView, [{
-	        key: 'onNumberRecieved',
-	        value: function () {
-	            var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee(playerNum) {
-	                var characterFromServer;
-	                return regeneratorRuntime.wrap(function _callee$(_context) {
-	                    while (1) {
-	                        switch (_context.prev = _context.next) {
-	                            case 0:
-	                                this.setState({ playerNum: playerNum });
-
-	                                _context.next = 3;
-	                                return (0, _Game.getCharacter)(playerNum);
-
-	                            case 3:
-	                                characterFromServer = _context.sent;
-
-
-	                                if (characterFromServer != null) {
-	                                    this.setState({ character: characterFromServer });
-	                                }
-
-	                                console.log(this.state.character);
-
-	                            case 6:
-	                            case 'end':
-	                                return _context.stop();
-	                        }
-	                    }
-	                }, _callee, this);
-	            }));
-
-	            function onNumberRecieved(_x) {
-	                return ref.apply(this, arguments);
-	            }
-
-	            return onNumberRecieved;
-	        }()
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-
-	            if (this.state.character == null) {
-	                return _react2.default.createElement(_EnterPlayerNumView2.default, {
-	                    onNumber: function onNumber(playerNum) {
-	                        return _this2.onNumberRecieved(playerNum);
-	                    },
-	                    setHomeView: this.props.setHomeView
-	                });
-	            }
-
-	            var tableRows = [{
-	                title: 'Strength',
-	                val: this.state.character.strength
-	            }, {
-	                title: 'Wisdom',
-	                val: this.state.character.wisdom
-	            }, {
-	                title: 'Dexterity',
-	                val: this.state.character.dexterity
-	            }, {
-	                title: 'Exp Points',
-	                val: this.state.character.points
-	            }].map(function (_ref, i) {
-	                var title = _ref.title;
-	                var val = _ref.val;
-	                return _react2.default.createElement(
-	                    'tr',
-	                    { key: i },
-	                    _react2.default.createElement(
-	                        'th',
-	                        null,
-	                        title
-	                    ),
-	                    _react2.default.createElement(
-	                        'td',
-	                        null,
-	                        val
-	                    )
-	                );
-	            });
-
-	            if ((0, _Game.calculateLevel)(this.state.character.points) >= _Game.DRAGONSLAYER_LEVEL) {
-	                return _react2.default.createElement(
-	                    'div',
-	                    { className: 'dragonslayer' },
-	                    _react2.default.createElement(_BackButton2.default, { onClick: this.props.setHomeView, dragonSlayer: true }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'view-dragonslayer-container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'title' },
-	                            'Hail, Dragon Slayer!'
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'dragonslayer-character-card' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'dragonslayer-character-type' },
-	                                this.state.character.race
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'dragonslayer-logo' },
-	                                _react2.default.createElement('img', { src: './static/img/dragon.png' })
-	                            ),
-	                            _react2.default.createElement('img', { src: 'static/img/' + this.state.character.race + '.png' }),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'dragonslayer-level-text' },
-	                                'Level ',
-	                                (0, _Game.calculateLevel)(this.state.character.points),
-	                                ' of ',
-	                                _Game.MAX_LEVEL
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'dragonslayer-table-container' },
-	                                _react2.default.createElement(
-	                                    'table',
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        'tbody',
-	                                        null,
-	                                        tableRows
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                );
-	            }
-
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(_BackButton2.default, { onClick: this.props.setHomeView }),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'view-character-container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Your Character'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'character-card' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'character-type' },
-	                            this.state.character.race
-	                        ),
-	                        _react2.default.createElement('img', { src: 'static/img/' + this.state.character.race + '.png' }),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'level-text' },
-	                            'Level ',
-	                            (0, _Game.calculateLevel)(this.state.character.points),
-	                            ' of ',
-	                            _Game.MAX_LEVEL
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'table-container' },
-	                            _react2.default.createElement(
-	                                'table',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'tbody',
-	                                    null,
-	                                    tableRows
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return ViewCharacterView;
-	}(_react2.default.Component);
-
-		exports.default = ViewCharacterView;
-
-/***/ },
-/* 475 */
+/* 470 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29387,11 +29239,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BackButton = __webpack_require__(469);
+	var _BackButton = __webpack_require__(471);
 
 	var _BackButton2 = _interopRequireDefault(_BackButton);
 
-	__webpack_require__(476);
+	__webpack_require__(474);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29450,13 +29302,121 @@
 		exports.default = EnterPlayerNumView;
 
 /***/ },
-/* 476 */
+/* 471 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(294);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(472);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var BackButton = function (_React$Component) {
+	    _inherits(BackButton, _React$Component);
+
+	    function BackButton() {
+	        _classCallCheck(this, BackButton);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(BackButton).apply(this, arguments));
+	    }
+
+	    _createClass(BackButton, [{
+	        key: 'render',
+	        value: function render() {
+	            if (this.props.dragonSlayer) {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { className: 'back-button', onClick: this.props.onClick },
+	                    _react2.default.createElement('img', { src: './static/img/back-red.svg' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'back-text' },
+	                        'back'
+	                    )
+	                );
+	            }
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'back-button', onClick: this.props.onClick },
+	                _react2.default.createElement('img', { src: './static/img/back.svg' }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'back-text' },
+	                    'back'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return BackButton;
+	}(_react2.default.Component);
+
+		exports.default = BackButton;
+
+/***/ },
+/* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(477);
+	var content = __webpack_require__(473);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(465)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./Base.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./Base.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 473 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(461)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 474 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(475);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(465)(content, {});
@@ -29476,7 +29436,7 @@
 	}
 
 /***/ },
-/* 477 */
+/* 475 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(461)();
@@ -29484,19 +29444,19 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n.enter-container {\n  color: #D1B125;\n  margin-left: 20%;\n  margin-right: 20%;\n}\n.enter-title {\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-top: 60px;\n  text-align: center;\n}\ninput[type=\"text\"] {\n  width: 100%;\n  margin-top: 9px;\n  height: 45px;\n  border-radius: 8px;\n  background-color: #262626;\n  border: 2px solid #D1B125;\n  box-shadow: 0px 6px 8px black;\n  color: #D1B125;\n  text-align: center;\n  font-family: 'Fell';\n  font-size: 26px;\n}\ninput[type=\"text\"]:focus {\n  outline: none;\n}\n.enter-container .button {\n  margin-top: 60px;\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n.enter-container {\n  color: #D1B125;\n  margin-left: 20%;\n  margin-right: 20%;\n}\n.enter-title {\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-top: 200px;\n  text-align: center;\n}\ninput[type=\"text\"] {\n  width: 100%;\n  margin-top: 9px;\n  height: 45px;\n  border-radius: 8px;\n  background-color: #262626;\n  border: 2px solid #D1B125;\n  box-shadow: 0px 6px 8px black;\n  color: #D1B125;\n  text-align: center;\n  font-family: 'Fell';\n  font-size: 26px;\n}\ninput[type=\"text\"]:focus {\n  outline: none;\n}\n.enter-container .button {\n  margin-top: 60px;\n  width: 100%;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 478 */
+/* 476 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(479);
+	var content = __webpack_require__(477);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(465)(content, {});
@@ -29516,7 +29476,7 @@
 	}
 
 /***/ },
-/* 479 */
+/* 477 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(461)();
@@ -29530,47 +29490,7 @@
 
 
 /***/ },
-/* 480 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(481);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(465)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./ViewCharacterDragonSlayer.less", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./ViewCharacterDragonSlayer.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 481 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(461)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n.dragonslayer .back-button {\n  color: #D91E01;\n}\n.view-dragonslayer-container {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n.view-dragonslayer-container .title {\n  margin-top: 10px;\n  font-size: 26px;\n  color: #D91E01;\n  font-family: 'Fell SC';\n  text-align: center;\n}\n.dragonslayer-screen {\n  background-color: #0F0404;\n}\n.dragonslayer-character-card {\n  background-color: #3B3B3B;\n  position: relative;\n  width: 100%;\n  border-radius: 8px;\n  border-radius: 24px;\n  border-color: #D8D8D8;\n  border: 4px solid #D8D8D8;\n  box-shadow: 0px 6px 8px #D8D8D8;\n  text-align: center;\n  color: #D8D8D8;\n  clear: both;\n  display: inline-block;\n}\n.dragonslayer-character-card .dragonslayer-character-type {\n  margin-top: 15px;\n  font-family: 'Fell';\n  font-size: 40px;\n  text-shadow: 0px 2px 8px black;\n  margin-bottom: 0;\n}\n.dragonslayer-character-card img {\n  height: 150px;\n}\n.dragonslayer-character-card .dragonslayer-logo img {\n  max-width: 60px;\n  max-height: 60px;\n  position: absolute;\n  top: 13px;\n  right: 13px;\n}\n.dragonslayer-character-card .dragonslayer-level-text {\n  margin-top: 4px;\n  font-family: 'Fell';\n  font-size: 26px;\n  text-shadow: 0px 2px 8px black;\n}\n.dragonslayer-character-card table {\n  float: left;\n  padding: 0;\n}\n.dragonslayer-character-card .dragonslayer-table-container {\n  display: inherit;\n  margin: 0;\n}\n.dragonslayer-character-card table {\n  margin-top: 15px;\n  margin-left: -20px;\n  text-align: left;\n  font-family: 'Fell SC';\n  font-size: 24px;\n  margin-bottom: 15px;\n}\n.dragonslayer-character-card table th {\n  text-align: right;\n}\n.dragonslayer-character-card table td {\n  text-align: left;\n  padding-left: 20px;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 482 */
+/* 478 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29589,17 +29509,17 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BackButton = __webpack_require__(469);
+	var _BackButton = __webpack_require__(471);
 
 	var _BackButton2 = _interopRequireDefault(_BackButton);
 
-	var _EnterPlayerNumView = __webpack_require__(475);
+	var _EnterPlayerNumView = __webpack_require__(470);
 
 	var _EnterPlayerNumView2 = _interopRequireDefault(_EnterPlayerNumView);
 
-	var _Game = __webpack_require__(472);
+	var _Game = __webpack_require__(468);
 
-	__webpack_require__(483);
+	__webpack_require__(479);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29772,13 +29692,13 @@
 		exports.default = EditNameView;
 
 /***/ },
-/* 483 */
+/* 479 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(484);
+	var content = __webpack_require__(480);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(465)(content, {});
@@ -29798,7 +29718,7 @@
 	}
 
 /***/ },
-/* 484 */
+/* 480 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(461)();
@@ -29807,6 +29727,86 @@
 
 	// module
 	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n.edit-container {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n.title {\n  margin-top: 60px;\n  margin-bottom: 30px;\n  text-align: center;\n  font-size: 30px;\n  font-family: 'Fell';\n  color: #D91E01;\n}\n.names-container {\n  width: 100%;\n  background-color: #323232;\n  border-radius: 8px;\n  height: auto;\n  padding-top: 11px;\n}\n.name-title {\n  font-family: 'Fell SC';\n  text-shadow: 0px 2px 8px black;\n  font-size: 28px;\n  color: #D1B125;\n  text-align: center;\n  margin-top: 10px;\n}\n.current-name {\n  color: #D1B125;\n  font-family: 'Fell';\n  font-size: 20px;\n  text-align: center;\n  margin-bottom: 40px;\n  margin-top: 10px;\n}\n.edit-container .button {\n  margin-top: 30px;\n  font-size: 30px;\n  height: 55px;\n  width: 75%;\n  margin-left: 12.5%;\n}\n.edit-container input {\n  margin-top: 15px;\n  width: 70%;\n  margin-left: 15%;\n  margin-bottom: 37px;\n  box-shadow: 0px 6px 8px #161616;\n  font-size: 22px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 481 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(482);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(465)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./LeaderboardView.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./LeaderboardView.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 482 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(461)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n.leaderboard-container {\n  color: #D1B125;\n  clear: both;\n  margin-left: 10%;\n  margin-right: 10%;\n}\n.leaderboard-container .leaderboard-title {\n  color: #D91E01;\n  font-family: 'Fell';\n  font-size: 32px;\n  text-align: center;\n  margin-top: 8px;\n}\n.leaderboard-container table {\n  padding: 0;\n  width: 100%;\n  text-align: left;\n  margin-left: auto;\n  margin-right: auto;\n  border-collapse: collapse;\n  overflow: hidden;\n}\n.leaderboard-container tr:first-child td:first-child {\n  border-top-left-radius: 8px;\n}\n.leaderboard-container tr:first-child td:last-child {\n  border-top-right-radius: 8px;\n}\n.leaderboard-container tr:last-child td:first-child {\n  border-bottom-left-radius: 8px;\n}\n.leaderboard-container tr:last-child td:last-child {\n  border-bottom-right-radius: 8px;\n}\n.leaderboard-container .table-container {\n  display: inline;\n  margin: 0;\n}\n.leaderboard-container .table-container .leaderboard-data {\n  font-family: 'Fell';\n  font-size: 20px;\n}\n.leaderboard-container .table-container .title-row {\n  margin-top: 12px;\n  font-size: 20px;\n  font-family: 'Fell SC';\n  text-align: left;\n}\n.leaderboard-container .table-container .rank-title {\n  padding-left: 12px;\n}\n.leaderboard-container .table-container .stripe-dark {\n  padding-top: 3px;\n  background-color: #313131;\n  padding-bottom: 3px;\n}\n.leaderboard-container .table-container .stripe-light {\n  padding-top: 3px;\n  background-color: #444444;\n  padding-bottom: 3px;\n}\n.leaderboard-container .table-container .leaderboard-rank {\n  padding-left: 10px;\n  padding-top: 7px;\n  padding-bottom: 7px;\n  padding-right: 40px;\n}\n.leaderboard-container .table-container .dslayer-true {\n  color: #D8D8D8;\n}\n.leaderboard-container .table-container .dslayer-true img {\n  max-width: 30px;\n  vertical-align: middle;\n}\n.leaderboard-container .table-container .dslayer-false img {\n  display: none;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 483 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(484);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(465)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./ViewCharacterDragonSlayer.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/postcss-loader/index.js!./../../node_modules/less-loader/index.js!./ViewCharacterDragonSlayer.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 484 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(461)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: 'Fell';\n  src: url(" + __webpack_require__(462) + ");\n}\n@font-face {\n  font-family: 'Fell Italic';\n  src: url(" + __webpack_require__(463) + ");\n}\n@font-face {\n  font-family: 'Fell SC';\n  src: url(" + __webpack_require__(464) + ");\n}\n.container {\n  position: relative;\n}\n.button {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  font-family: 'Fell SC';\n  display: inline-block;\n}\n.button-secondary {\n  color: black;\n  background: #D1B125;\n  border-radius: 8px;\n  box-shadow: 0 6px 8px 0 black;\n  cursor: pointer;\n  display: inline-block;\n  color: #D1B125;\n  background-color: #161616;\n  font-family: 'Fell SC';\n  margin-top: 30px;\n  border: 4px solid #D1B125;\n}\n.back-button {\n  color: #D1B125;\n  font-family: 'Fell SC';\n  font-size: 20px;\n  margin-left: 10px;\n  margin-top: 15px;\n}\n.back-button img {\n  margin-right: 5px;\n  vertical-align: middle;\n}\n.back-button .back-text {\n  display: inline;\n}\nbody {\n  background-color: #161616;\n}\n.dragonslayer .back-button {\n  color: #D91E01;\n}\n.view-dragonslayer-container {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n.view-dragonslayer-container .title {\n  margin-top: 10px;\n  font-size: 26px;\n  color: #D91E01;\n  font-family: 'Fell SC';\n  text-align: center;\n}\n.dragonslayer-screen {\n  background-color: #0F0404;\n}\n.dragonslayer-character-card {\n  background-color: #3B3B3B;\n  position: relative;\n  width: 100%;\n  border-radius: 8px;\n  border-radius: 24px;\n  border-color: #D8D8D8;\n  border: 4px solid #D8D8D8;\n  box-shadow: 0px 6px 8px #D8D8D8;\n  text-align: center;\n  color: #D8D8D8;\n  clear: both;\n  display: inline-block;\n}\n.dragonslayer-character-card .dragonslayer-character-type {\n  margin-top: 15px;\n  font-family: 'Fell';\n  font-size: 40px;\n  text-shadow: 0px 2px 8px black;\n  margin-bottom: 0;\n}\n.dragonslayer-character-card img {\n  height: 150px;\n}\n.dragonslayer-character-card .dragonslayer-logo img {\n  max-width: 60px;\n  max-height: 60px;\n  position: absolute;\n  top: 13px;\n  right: 13px;\n}\n.dragonslayer-character-card .dragonslayer-level-text {\n  margin-top: 4px;\n  font-family: 'Fell';\n  font-size: 26px;\n  text-shadow: 0px 2px 8px black;\n}\n.dragonslayer-character-card table {\n  float: left;\n  padding: 0;\n}\n.dragonslayer-character-card .dragonslayer-table-container {\n  display: inherit;\n  margin: 0;\n}\n.dragonslayer-character-card table {\n  margin-top: 15px;\n  margin-left: -20px;\n  text-align: left;\n  font-family: 'Fell SC';\n  font-size: 24px;\n  margin-bottom: 15px;\n}\n.dragonslayer-character-card table th {\n  text-align: right;\n}\n.dragonslayer-character-card table td {\n  text-align: left;\n  padding-left: 20px;\n}\n", ""]);
 
 	// exports
 
