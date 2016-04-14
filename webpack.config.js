@@ -17,7 +17,7 @@ module.exports = {
   ],
   devtool: 'cheap-module-source-map',
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname),
     filename: 'app.js',
     sourceMapFilename: 'app.js.map',
   },
