@@ -1,10 +1,12 @@
 import React from 'react'
 
-import { calculateLevel, getCharacter, RACES, MAX_LEVEL} from './Game.jsx'
+import { calculateLevel, getCharacter, RACES, MAX_LEVEL, DRAGONSLAYER_LEVEL} from './Game.jsx'
 import EnterPlayerNumView from './EnterPlayerNumView.jsx'
 import BackButton from './BackButton.jsx'
+import DragonSlayerBackButton from './BackButton.jsx'
 
 import '../less/ViewCharacterView.less'
+import '../less/ViewCharacterDragonSlayer.less'
 
 class ViewCharacterView extends React.Component {
 
@@ -61,6 +63,29 @@ class ViewCharacterView extends React.Component {
             </tr>
         ))
 
+        if (calculateLevel(this.state.character.points)>=DRAGONSLAYER_LEVEL) {
+            return (
+                <div className = 'dragonslayer'> 
+                    <BackButton onClick={this.props.setHomeView} dragonSlayer={true}/>
+                    <div className='view-dragonslayer-container'> 
+                        <div className='title'>Hail, Dragon Slayer!</div>
+                        <div className='dragonslayer-character-card'>
+                            <div className='dragonslayer-character-type'>{this.state.character.race}</div>
+                            <div className='dragonslayer-logo'><img src='./static/img/dragon.png'/></div>
+                            <img src={`static/img/${this.state.character.race}.png`}/>
+                            <div className='dragonslayer-level-text'>Level {calculateLevel(this.state.character.points)} of {MAX_LEVEL}</div>
+                            <div className='dragonslayer-table-container'>
+                                <table>
+                                    <tbody>
+                                    {tableRows}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+            )
+        }
 
         return (
             <div>
