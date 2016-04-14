@@ -1,5 +1,79 @@
 @import './Base.less';
 
-.container {
+.leaderboard-container {
     color: @yellow;
+    clear: both;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    .leaderboard-title {
+        color: @red;
+        font-family: 'Fell';
+        font-size: 32px;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    table {
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        overflow: hidden;
+    }
+
+    tr:first-child td:first-child { 
+        border-top-left-radius: 8px; 
+    }
+    tr:first-child td:last-child { 
+        border-top-right-radius: 8px; 
+    }
+    tr:last-child td:first-child { 
+        border-bottom-left-radius: 8px; 
+    }
+    tr:last-child td:last-child { 
+        border-bottom-right-radius: 8px; 
+    }
+
+
+    .table-container {
+        display: inline;
+        margin: 0;
+
+        .leaderboard-data {
+            font-family: 'Fell';
+            font-size: 20px;
+        }
+
+        .title-row {
+            margin-top: 7px;
+            font-size: 24px;
+            font-family: 'Fell SC';
+            text-align: left;
+        }
+
+        .rank-title {
+            padding-left: 12px;
+        }
+
+        .stripe-dark {
+            background-color: #313131;
+        }
+
+        .stripe-light {
+            background-color: #444444;
+        }
+
+        .leaderboard-rank {
+            padding-left: 9px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+    }
+
+
+
 }

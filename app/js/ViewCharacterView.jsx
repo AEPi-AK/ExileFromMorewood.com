@@ -49,17 +49,19 @@ class ViewCharacterView extends React.Component {
             />
         } 
         return (
-            <div className='view-character-container'>
+            <div>
                 <BackButton onClick={this.props.setHomeView}/>
-                <div className='title'>Your Character</div>
-                <div className='character-card'>
-                    <div className='character-type'>Dickbutt</div>
-                    <img src='static/img/dickbutt.jpg'/>
-                    <div className='level-text'>Level 4 of 20</div>
-                    <div className='table-container'>
-                        <table>
-                            {tableRows}
-                        </table>
+                <div className='view-character-container'> 
+                    <div className='title'>Your Character</div>
+                    <div className='character-card'>
+                        <div className='character-type'>Dickbutt</div>
+                        <img src='static/img/dickbutt.jpg'/>
+                        <div className='level-text'>Level 4 of 20</div>
+                        <div className='table-container'>
+                            <table>
+                                {tableRows}
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

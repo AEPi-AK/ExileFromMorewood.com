@@ -30,16 +30,19 @@ class EditNameView extends React.Component {
             />
         } 
         return (
-            <div className='edit-container'> 
-                <BackButton onClick={this.props.setHomeView}/>
-                <div className='title'>Edit Player Name</div> 
-                <div className='names-container'>
-                    <div className='name-title'>Current Name</div>
-                    <div className='name'>{this.state.playerName}</div>
-                    <div className='name-title'>New Name</div>
-                    <input type='text' ref='input' maxLength='10' keyboardType='numeric'/>
+            <div>
+            <BackButton onClick={this.props.setHomeView}/>
+                <div className='edit-container'> 
+                    
+                    <div className='title'>Edit Player Name</div> 
+                    <div className='names-container'>
+                        <div className='name-title'>Current Name</div>
+                        <div className='name'>{this.state.playerName}</div>
+                        <div className='name-title'>New Name</div>
+                        <input type='text' ref='input' maxLength='10' keyboardType='numeric'/>
+                    </div>
+                    <div className='button' onClick={this.setName.bind(this)}>Done</div>
                 </div>
-                <div className='button' onClick={this.setName.bind(this)}>Done</div>
             </div>
         )
     }
