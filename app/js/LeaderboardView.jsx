@@ -35,11 +35,11 @@ class LeaderboardView extends React.Component {
             }
 
             return (
-                    <tr className={`stripe-${stripeStyle}`} key={i}>
-                        <td className='leaderboard-rank'>{i+1}</td>
-                        <td className='leaderboard-name'>{name}</td>
-                        <td className='leaderboard-exp'>{points}</td>
-                    </tr>
+                <tr className={`stripe-${stripeStyle}`} key={i}>
+                    <td className='leaderboard-rank'>{i+1}</td>
+                    <td className='leaderboard-name'>{name}</td>
+                    <td className='leaderboard-exp'>{points}</td>
+                </tr>
             )
         })
 

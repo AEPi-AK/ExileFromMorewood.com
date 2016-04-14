@@ -42,8 +42,6 @@ class EditNameView extends React.Component {
             character.name = inputNode.value
             
             const characterFromServer = await updateCharacter(character)
-            console.log(character)
-            console.log(characterFromServer) 
             this.setState({character: characterFromServer})
         }
     }
