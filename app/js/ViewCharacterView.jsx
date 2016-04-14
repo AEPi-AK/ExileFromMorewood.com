@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { calculateLevel, getCharacter, RACES, MAX_LEVEL, DRAGONSLAYER_LEVEL} from './Game.jsx'
+import {calculateLevel, getCharacter, RACES, MAX_LEVEL, DRAGONSLAYER_LEVEL} from './Game.jsx'
 import EnterPlayerNumView from './EnterPlayerNumView.jsx'
 import BackButton from './BackButton.jsx'
 import DragonSlayerBackButton from './BackButton.jsx'
