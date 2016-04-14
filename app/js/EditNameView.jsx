@@ -13,7 +13,20 @@ class EditNameView extends React.Component {
         this.state = {
             playerNum: null,
             playerName: 'ButtWizard420',
+            character: null,
         }
+    }
+
+    async onNumberRecieved(playerNum) {
+        setName()
+        this.setState({playerNum})
+
+        const characterFromServer = await getCharacter(playerNum)
+        if (characterFromServer != null) {
+            this.setState({character: characterFromServer})
+        }
+        
+        console.log(this.state.character)
     }
 
     setName() {
@@ -21,6 +34,7 @@ class EditNameView extends React.Component {
         if (inputNode.value!='')
             this.setState({playerName: inputNode.value})
     }
+
 
     render() {
         if (this.state.playerNum == null) {
@@ -41,7 +55,7 @@ class EditNameView extends React.Component {
                         <div className='name-title'>New Name</div>
                         <input type='text' ref='input' maxLength='10' keyboardType='numeric'/>
                     </div>
-                    <div className='button' onClick={this.setName.bind(this)}>Done</div>
+                    <div className='button' onClick={this.onNumberRecieved.bind(this)}>Done</div>
                 </div>
             </div>
         )

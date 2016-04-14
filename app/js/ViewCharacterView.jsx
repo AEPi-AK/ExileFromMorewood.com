@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { calculateLevel, getCharacter, RACES} from './Game.jsx'
 import EnterPlayerNumView from './EnterPlayerNumView.jsx'
 import BackButton from './BackButton.jsx'
 
@@ -11,12 +12,21 @@ class ViewCharacterView extends React.Component {
         super(props)
         this.state = {
             playerNum: null,
+            character: null,
         }
     }
 
+    async onNumberRecieved(playerNum) {
+        this.setState({playerNum})
+
+        const characterFromServer = await getCharacter(playerNum)
+        if (characterFromServer != null) {
+            this.setState({character: characterFromServer})
+        }
+        console.log(this.state.character)
+    }
 
     render() {
-
         const tableRows = [
             {
                 title:'Strength', 
@@ -44,10 +54,11 @@ class ViewCharacterView extends React.Component {
 
         if (this.state.playerNum == null) {
             return <EnterPlayerNumView
-                onNumber={playerNum => this.setState({playerNum})} 
+                onNumber={playerNum => this.onNumberRecieved(playerNum)} 
                 setHomeView={this.props.setHomeView}
             />
         } 
+
         return (
             <div>
                 <BackButton onClick={this.props.setHomeView}/>
@@ -59,7 +70,9 @@ class ViewCharacterView extends React.Component {
                         <div className='level-text'>Level 4 of 20</div>
                         <div className='table-container'>
                             <table>
+                                <tbody>
                                 {tableRows}
+                                </tbody>
                             </table>
                         </div>
                     </div>
