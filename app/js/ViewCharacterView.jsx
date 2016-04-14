@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { calculateLevel, getCharacter, RACES} from './Game.jsx'
+import { calculateLevel, getCharacter, RACES, MAX_LEVEL} from './Game.jsx'
 import EnterPlayerNumView from './EnterPlayerNumView.jsx'
 import BackButton from './BackButton.jsx'
 
@@ -27,22 +27,29 @@ class ViewCharacterView extends React.Component {
     }
 
     render() {
+
+        if (this.state.character == null) {
+            return <EnterPlayerNumView
+                onNumber={playerNum => this.onNumberRecieved(playerNum)} 
+                setHomeView={this.props.setHomeView}
+            />
+        } 
         const tableRows = [
             {
                 title:'Strength', 
-                val:10,
+                val:this.state.character.strength,
             },
             {
                 title:'Wisdom', 
-                val:15,
+                val:this.state.character.wisdom,
             },
             {
                 title:'Dexterity', 
-                val:20
+                val:this.state.character.dexterity,
             },
             {
                 title:'Exp Points', 
-                val:13,
+                val:this.state.character.points,
             },
         ].map(({title, val}, i) => (
             <tr key={i}>
@@ -52,22 +59,15 @@ class ViewCharacterView extends React.Component {
         ))
 
 
-        if (this.state.playerNum == null) {
-            return <EnterPlayerNumView
-                onNumber={playerNum => this.onNumberRecieved(playerNum)} 
-                setHomeView={this.props.setHomeView}
-            />
-        } 
-
         return (
             <div>
                 <BackButton onClick={this.props.setHomeView}/>
                 <div className='view-character-container'> 
                     <div className='title'>Your Character</div>
                     <div className='character-card'>
-                        <div className='character-type'>Dickbutt</div>
-                        <img src='static/img/dickbutt.jpg'/>
-                        <div className='level-text'>Level 4 of 20</div>
+                        <div className='character-type'>{this.state.character.race}</div>
+                        <img src={`static/img/${this.state.character.race}.png`}/>
+                        <div className='level-text'>Level {calculateLevel(this.state.character.points)} of {MAX_LEVEL}</div>
                         <div className='table-container'>
                             <table>
                                 <tbody>
