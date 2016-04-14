@@ -20,7 +20,7 @@ class EnterPlayerNumView extends React.Component {
                 <BackButton onClick={this.props.setHomeView}/>
                 <div className='enter-container'>
                     <div className='enter-title'>Enter Player Number</div>
-                    <input type='number' ref='input' keyboardType='numeric'/>
+                    <input type='number' inputmode='numeric' pattern='[0-9]*' ref='input' keyboardType='numeric'/>
                     <div className='button' onClick={this.savePlayerNum.bind(this)}>Done</div>
                 </div>
             </div>
