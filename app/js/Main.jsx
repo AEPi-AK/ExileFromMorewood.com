@@ -35,6 +35,7 @@ class Main extends React.Component {
         const views = this.views.map(view => view({
           setView: this.setView.bind(this),
           setHomeView: this.setHomeView.bind(this),
+          setCharacter: character => this.setState({character}),
         }))
         return (
           <div className='view'>

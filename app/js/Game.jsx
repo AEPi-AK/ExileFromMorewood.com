@@ -27,6 +27,30 @@ async function getCharacter(identifier) {
   return await response.json()
 }
 
+async function updateCharacter(character) {
+  console.log('updateCharacter')
+  console.log(character)
+  const response = await fetch(api_base + '/characters/update', {
+    method: 'POST',
+    headers: {
+     'Accept': 'application/json',
+     'Content-Type': 'application/json'
+    },
+    
+    // pro_id is the only thing we ever want to update from the kiosk
+    body: JSON.stringify({
+      id: character.id,
+      name: character.name,
+    }),
+  })
+
+  if (response.status == 200) { // updated
+    return await response.json()
+  }
+
+  throw response
+}
+
 export {
   RACES,
   STATS,
@@ -34,4 +58,5 @@ export {
   DRAGONSLAYER_LEVEL,
   calculateLevel,
   getCharacter,
+  updateCharacter,
 }

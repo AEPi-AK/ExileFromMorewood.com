@@ -9,7 +9,6 @@ class EnterPlayerNumView extends React.Component {
 
     savePlayerNum() {
         const inputNode = ReactDOM.findDOMNode(this.refs.input)
-        console.log(inputNode.value)
         if (!isNaN(inputNode.value) && (inputNode.value!='')) {
             this.props.onNumber(Number(inputNode.value))
         }

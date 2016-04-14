@@ -20,9 +20,11 @@ class ViewCharacterView extends React.Component {
         this.setState({playerNum})
 
         const characterFromServer = await getCharacter(playerNum)
+
         if (characterFromServer != null) {
             this.setState({character: characterFromServer})
         }
+        
         console.log(this.state.character)
     }
 
@@ -34,6 +36,7 @@ class ViewCharacterView extends React.Component {
                 setHomeView={this.props.setHomeView}
             />
         } 
+
         const tableRows = [
             {
                 title:'Strength', 
